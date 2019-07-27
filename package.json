@@ -1,0 +1,28 @@
+{
+  "name": "babel-rollup-debug",
+  "version": "0.0.1",
+  "private": false,
+  "main": "rollup-output/Button.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run build:rollup && yarn run build:babel",
+    "build:rollup": "rollup -c rollup.config.js",
+    "build:babel": "babel src/Button.js --out-file babel-output/Button.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-plugin-styled-components": "^1.10.6",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "4.2.0"
+  }
+}
